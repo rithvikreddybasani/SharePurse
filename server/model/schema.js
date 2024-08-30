@@ -1,7 +1,7 @@
 var mongoose = require('mongoose')
 var logger = require('../model/helper/logger')
 
-mongoose.connect(process.env.MONGODB_URI, 
+mongoose.connect("mongodb+srv://rithvik:rithvikreddy@nodeexpressprojects.fi4jofi.mongodb.net/FairShare?retryWrites=true&w=majority&appName=NodeExpressProjects", 
 //     {
 //     maxPoolSize: 50,
 //     wtimeoutMS: 2500,
