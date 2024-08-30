@@ -25,13 +25,6 @@ app.use('/api/users', usersRouter)
 app.use('/api/group', apiAuth.validateToken,groupRouter)
 app.use('/api/expense', apiAuth.validateToken,expenseRouter)
 
-if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
-    app.use(express.static('client/build'));
-    app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname,'client','build','index.html'));
-    });
-   }
-
 //To detect and log invalid api hits 
 app.all('*', (req, res) => {
     logger.error(`[Invalid Route] ${req.originalUrl}`)
