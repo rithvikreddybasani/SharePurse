@@ -2,7 +2,7 @@ var jwt = require('jsonwebtoken')
 var logger = require('./logger')
 
 exports.generateAccessToken = (user) => {
-    return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET)
+    return jwt.sign(user, "NARENDRAMODI")
 }
 
 
@@ -22,7 +22,7 @@ exports.validateToken = (req, res, next) => {
 
 
             //function to verify the token 
-            jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+            jwt.verify(token, "NARENDRAMODI", (err, user) => {
                 if (err) {
                     logger.error(`URL : ${req.originalUrl} | API Authentication Fail | message: Invalid Token`)
                     res.sendStatus(403).json({
