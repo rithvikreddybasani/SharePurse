@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-const API = axios.create({ baseURL: 'https://share-purse.vercel.app/' });
+const API = axios.create({ baseURL: 'https://sharepurse-1.onrender.com/' });
 
 // const API = axios.create({ baseURL: ''})
 // 
