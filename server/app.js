@@ -1,10 +1,8 @@
 const express = require('express')
-const dotenv = require('dotenv')
 const app = express()
 const cors = require("cors")
 const path = require("path")
 app.use(cors())
-dotenv.config()
 app.use(express.json())
 
 const logger = require('./model/helper/logger')
@@ -22,7 +20,7 @@ app.use('/api/group', apiAuth.validateToken,groupRouter)
 app.use('/api/expense', apiAuth.validateToken,expenseRouter)
 
 
-const port = process.env.PORT || 5000
+const port =  5000
 app.listen(port, (err) => {
     console.log(`Server started in PORT | ${port}`)
 })
