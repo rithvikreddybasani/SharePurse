@@ -2,11 +2,11 @@
   "name": "splitapp",
   "version": "1.0.0",
   "description": "This is a group money spliting app made with MERN stack ",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "npx nodemon app.js",
-    "start": "node app.js",
-    "dev": "node app.js"
+    "test": "npx nodemon index.js",
+    "start": "node index.js",
+    "dev": "node index.js"
   },
   "keywords": [
     "SplitWise"
