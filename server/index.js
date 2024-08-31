@@ -2,9 +2,14 @@ const express = require('express')
 const app = express()
 const cors = require("cors")
 const path = require("path")
-app.use(cors())
+const corsConfig={
+    origin:"*",
+    Credential:true,
+    methods:["GET","POST","PUT","DELETE"],
+};
+app.options("",cors(corsConfig))
 app.use(express.json())
-
+app.use(cors(corsConfig))
 const logger = require('./model/helper/logger')
 const requestLogger =  require('./model/helper/requestLogger')
 const apiAuth =  require('./model/helper/apiAuthentication') 
