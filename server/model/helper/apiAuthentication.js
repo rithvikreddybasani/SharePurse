@@ -42,7 +42,7 @@ exports.validateToken = (req, res, next) => {
 
 //Validation function to check if the user is same as the token user 
 exports.validateUser = (user, emailId) => {
-    if (process.env.DISABLE_API_AUTH != "true" && user != emailId){
+    if (user != emailId){
         var err = new Error("Access Denied")
         err.status = 403
         throw err
